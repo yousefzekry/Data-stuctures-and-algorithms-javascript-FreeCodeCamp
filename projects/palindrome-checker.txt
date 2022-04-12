@@ -1,0 +1,12 @@
+function palindrome(str) {
+  let noSpace = str.replace(/\W|_/g,"").toLowerCase();
+  let reversedString = noSpace.split("").reverse().join("");
+  console.log(noSpace ,reversedString)
+  if (noSpace != reversedString){
+    return false;
+  }
+  return true;
+}
+
+let result = palindrome("A man, a plan, a canal. Panama");
+console.log(result);
